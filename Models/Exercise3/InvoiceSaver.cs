@@ -10,7 +10,7 @@ namespace Classes._3
     {
         public void SaveToFile()
         {
-            Console.WriteLine("Saving invoice to file...");
+            Console.WriteLine("→ Saving invoice to file...");
         }
     }
 }

@@ -10,7 +10,7 @@ namespace Classes
     {
         public void PrintInvoice()
         {
-            Console.WriteLine("Printing invoice...");
+            Console.WriteLine("→ Printing invoice...");
         }
     }
 }

@@ -16,7 +16,7 @@ namespace Classes._3
 
         public void PrintOnPaper()
         {
-            Console.WriteLine("Printing invoice on paper...");
+            Console.WriteLine("→ Printing invoice on paper...");
         }
     }
 }

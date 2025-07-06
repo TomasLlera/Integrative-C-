@@ -54,24 +54,36 @@ namespace Classes._4
 
         public void ShowProducts()
         {
-            Console.WriteLine("\n PRODUCT LIST:");
+            Console.WriteLine("\n╔════════════════════════════════════════════════════════╗");
+            Console.WriteLine("║                       PRODUCT LIST                     ║");
+            Console.WriteLine("╠════════════════════════════════════════════════════════╣");
+
             if (productList.Count == 0)
             {
-                Console.WriteLine("[INFO] No products found.");
-                return;
+                Console.WriteLine("║                 [INFO] No products found.              ║");
+            }
+            else
+            {
+                foreach (var p in productList)
+                {
+                    string line = $"ID: {p.Id} | Name: {p.Name} | Price: {p.Price:C} | Stock: {p.Stock}";
+                    // Ajusta el padding para mantener el ancho del cuadro
+                    Console.WriteLine("║ " + line.PadRight(54) + " ║");
+                }
             }
 
-            foreach (var p in productList)
-            {
-                Console.WriteLine($"ID: {p.Id} | Name: {p.Name} | Price: {p.Price:C} | Stock: {p.Stock}");
-            }
+            Console.WriteLine("╚════════════════════════════════════════════════════════╝");
         }
 
         public void ModifyProduct()
         {
             ShowProducts();
             Console.WriteLine("Enter the ID of the product to modify:");
-            int id = int.Parse(Console.ReadLine());
+            if (!int.TryParse(Console.ReadLine(), out int id))
+            {
+                Console.WriteLine("[ERROR] Invalid input. Please enter a valid number.");
+                return;
+            }
 
             var product = productList.Find(p => p.Id == id);
             if (product == null)
@@ -80,15 +92,20 @@ namespace Classes._4
                 return;
             }
 
-            Console.WriteLine("New Name:");
+            Console.WriteLine($"\nCurrent Name: {product.Name}");
+            Console.Write("→ New Name: ");
             product.Name = ValidInput(IsString: true);
-            Console.WriteLine("New Price:");
+
+            Console.WriteLine($"\nCurrent Price: {product.Price:C}");
+            Console.Write("→ New Price: ");
             product.Price = decimal.Parse(ValidInput(IsNumeric: true));
-            Console.WriteLine("New Stock:");
+
+            Console.WriteLine($"\nCurrent Stock: {product.Stock}");
+            Console.Write("→ New Stock: ");
             product.Stock = int.Parse(ValidInput(IsNumeric: true));
 
             SaveProducts();
-            Console.WriteLine("Product updated successfully.\n");
+            Console.WriteLine("\nProduct updated successfully.\n");
         }
 
         public void DeleteProduct()

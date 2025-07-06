@@ -26,14 +26,18 @@ namespace TP_INTEGRADOR_1
             do
             {
                 Console.Clear();
-                Console.WriteLine("=== EXERCISE MANAGEMENT MENU ===");
-                Console.WriteLine("1. Fundaments of POO");
-                Console.WriteLine("2. Inheritance and Polymorphism");
-                Console.WriteLine("3. SOLID principles");
-                Console.WriteLine("4. CRUD + JSON + Repository");
-                Console.WriteLine("5. Proyect Final MVC");
-                Console.WriteLine("0. Exit");
-                Console.Write("Select an option: ");
+                Console.WriteLine("╔═══════════════════════════════════════════════════╗");
+                Console.WriteLine("║             EXERCISE MANAGEMENT MENU              ║");
+                Console.WriteLine("╠═══════════════════════════════════════════════════╣");
+                Console.WriteLine("║  1. Fundamentals of POO                           ║");
+                Console.WriteLine("║  2. Inheritance and Polymorphism                  ║");
+                Console.WriteLine("║  3. SOLID Principles                              ║");
+                Console.WriteLine("║  4. CRUD + JSON + Repository                      ║");
+                Console.WriteLine("║  5. Final Project - MVC Architecture              ║");
+                Console.WriteLine("║  0. Exit                                          ║");
+                Console.WriteLine("║═══════════════════════════════════════════════════║");
+                Console.WriteLine("║  -. Select an option:                             ║");
+                Console.WriteLine("╚═══════════════════════════════════════════════════╝");
 
                 try
                 {
@@ -148,13 +152,17 @@ namespace TP_INTEGRADOR_1
             do
             {
                 Console.Clear();
-                Console.WriteLine("=== PRODUCT MANAGEMENT MENU ===");
-                Console.WriteLine("1. Add New Product");
-                Console.WriteLine("2. Show All Products");
-                Console.WriteLine("3. Modify Product");
-                Console.WriteLine("4. Delete Product");
-                Console.WriteLine("0. Exit");
-                Console.Write("Select an option: ");
+                Console.WriteLine("╔════════════════════════════════╗");
+                Console.WriteLine("║      PRODUCT MANAGEMENT MENU   ║");
+                Console.WriteLine("╠════════════════════════════════╣");
+                Console.WriteLine("║  1. Add New Product            ║");
+                Console.WriteLine("║  2. Show All Products          ║");
+                Console.WriteLine("║  3. Modify Product             ║");
+                Console.WriteLine("║  4. Delete Product             ║");
+                Console.WriteLine("║  0. Exit                       ║");
+                Console.WriteLine("╠════════════════════════════════╣");
+                Console.WriteLine("╠ Select an option:              ║");
+                Console.WriteLine("╚════════════════════════════════╝");
 
                 try
                 {
@@ -219,15 +227,19 @@ namespace TP_INTEGRADOR_1
             do
             {
                 Console.Clear();
-                Console.WriteLine("=========== Library System ===========");
-                Console.WriteLine("1. Add Book");
-                Console.WriteLine("2. Show All Books");
-                Console.WriteLine("3. List Available Books");
-                Console.WriteLine("4. Lend Book");
-                Console.WriteLine("5. Return Book");
-                Console.WriteLine("6. Show Active Loans");
-                Console.WriteLine("7. Exit");
-                Console.WriteLine("Select an option:");
+                Console.WriteLine("╔════════════════════════════════════════════╗");
+                Console.WriteLine("║         LIBRARY MANAGEMENT SYSTEM          ║");
+                Console.WriteLine("╠════════════════════════════════════════════╣");
+                Console.WriteLine("║  1. Add Book                               ║");
+                Console.WriteLine("║  2. Show All Books                         ║");
+                Console.WriteLine("║  3. List Available Books                   ║");
+                Console.WriteLine("║  4. Lend Book                              ║");
+                Console.WriteLine("║  5. Return Book                            ║");
+                Console.WriteLine("║  6. Show Active Loans                      ║");
+                Console.WriteLine("║  7. Exit                                   ║");
+                Console.WriteLine("║════════════════════════════════════════════║");
+                Console.WriteLine("║  -. Select an option:                      ║");
+                Console.WriteLine("╚════════════════════════════════════════════╝");
 
                 try
                 {

@@ -17,14 +17,19 @@ namespace Views
             {
                 try
                 {
-                    Console.WriteLine("Book title:");
+                    Console.WriteLine("=== ADD A NEW BOOK ===\n");
+
+                    Console.WriteLine("→ Title       : ");
                     string title = UserView.ValidInput(true);
-                    Console.WriteLine("Book author:");
+
+                    Console.WriteLine("→ Author      : ");
                     string author = UserView.ValidInput(true);
-                    Console.WriteLine("Book ISBN:");
+
+                    Console.WriteLine("→ ISBN        : ");
                     string isbn = UserView.ValidInput(true);
-                    Console.WriteLine("Book available? (y/n):");
-                    string availability = Console.ReadLine().ToLower();
+
+                    Console.WriteLine("→ Available? (y/n): ");
+                    string availability = Console.ReadLine().Trim().ToLower();
                     bool available = (availability == "y");
 
                     list.Add(new Book(title, author, isbn, available));
@@ -43,11 +48,17 @@ namespace Views
 
         public static void ShowBook(List<Book> books)
         {
+            Console.WriteLine("╔════╦════════════════════════════════╦════════════════════╦══════════════╦═══════════════╗");
+            Console.WriteLine("║ #  ║ Title                          ║ Author             ║ ISBN         ║ Status        ║");
+            Console.WriteLine("╠════╬════════════════════════════════╬════════════════════╬══════════════╬═══════════════╣");
+
             for (int i = 0; i < books.Count; i++)
             {
                 string status = books[i].IsAvailable ? "Available" : "Not Available";
-                Console.WriteLine($"[{i}] {books[i].Title} by {books[i].Author} - ISBN: {books[i].ISBN} - {status}");
+                Console.WriteLine($"║ {i,-2} ║ {books[i].Title,-30} ║ {books[i].Author,-18} ║ {books[i].ISBN,-12} ║ {status} ║");
             }
+
+            Console.WriteLine("╚════╩════════════════════════════════╩════════════════════╩══════════════╩═══════════════╝");
         }
     }
 }

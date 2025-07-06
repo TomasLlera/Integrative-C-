@@ -14,12 +14,12 @@ namespace Classes
 
         public override string MakeSound()
         {
-            return "MiauMiau!";
+            return "→ MiauMiau!";
         }
 
         public override string Presentation()
         {
-            return $"\r\nI am a {Name} and i make {MakeSound()}";
+            return $"\r\n→ I am a {Name} and i make {MakeSound()}";
         }
     }
 }

@@ -21,18 +21,18 @@ namespace Classes
 
         public string Greet()
         {
-            return $"Hello, i am {CompleteName} and i have {Age} years old.";
+            return $"→ Hello, i am {CompleteName} and i have {Age} years old.";
         }
 
         public string IsAdult()
         {
             if (Age >= 18)
             {
-                return"\r\nThe age is biggest than 18";
+                return "\r\n→ The age is biggest than 18";
             } 
             else
             {
-                return "\r\nThe age cannot be less than 18";
+                return "\r\n→ The age cannot be less than 18";
             }
         }
     }

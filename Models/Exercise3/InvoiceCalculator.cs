@@ -10,7 +10,7 @@ namespace Classes
     {
         public void CalculateTotal()
         {
-            Console.WriteLine("Calculating invoice total...");
+            Console.WriteLine("→ Calculating invoice total...");
         }
     }
 }

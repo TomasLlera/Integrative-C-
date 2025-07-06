@@ -21,7 +21,7 @@ namespace Classes
         }
         public virtual string Presentation()
         {
-            return $"I am a {Name} and i make {MakeSound()}";
+            return $"→ I am a {Name} and i make {MakeSound()}";
         }
     }
 }

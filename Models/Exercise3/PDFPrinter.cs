@@ -16,7 +16,7 @@ namespace Classes._3
 
         public void PrintToPDF()
         {
-            Console.WriteLine("Generating invoice PDF...");
+            Console.WriteLine("→ Generating invoice PDF...");
         }
     }
 }

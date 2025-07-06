@@ -11,17 +11,25 @@ namespace Views
     {
         public static User CreateUser()
         {
-            Console.WriteLine("User name:");
+            Console.WriteLine("=== ADD A NEW USER ===\n");
+
+            Console.WriteLine("→ Name  : ");
             string name = ValidInput(true);
-            Console.WriteLine("User email:");
-            string email = ValidInput(false,true);
+
+            Console.WriteLine("→ Email : ");
+            string email = ValidInput(false, true);
 
             return new User(name, email);
         }
 
         public static void ShowUser(User user)
         {
-            Console.WriteLine($"User: {user.Name} - Email: {user.Email}");
+            Console.WriteLine("╔════════════════════════════╗");
+            Console.WriteLine("║         USER INFO          ║");
+            Console.WriteLine("╠════════════════════════════╣");
+            Console.WriteLine($"║ Name : {user.Name.PadRight(20)}║");
+            Console.WriteLine($"║ Email: {user.Email.PadRight(20)}║");
+            Console.WriteLine("╚════════════════════════════╝");
         }
 
         public static string ValidInput(bool IsString = false, bool IsMail = false)
