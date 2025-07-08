@@ -91,9 +91,9 @@
     <Compile Include="Interfaces\Exercise3\IPaperPrinter.cs" />
     <Compile Include="Interfaces\Exercise3\IPrintable.cs" />
     <Compile Include="Models\Exercise4\Product.cs" />
-    <Compile Include="Models\MVC\Book.cs" />
-    <Compile Include="Models\MVC\Loan.cs" />
-    <Compile Include="Models\MVC\User.cs" />
+    <Compile Include="Models\Exercise5\Book.cs" />
+    <Compile Include="Models\Exercise5\Loan.cs" />
+    <Compile Include="Models\Exercise5\User.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repository\Repository.cs" />

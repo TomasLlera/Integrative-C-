@@ -41,7 +41,7 @@ namespace Controllers
         }
         public void ShowBookList()
         {
-            LoanView.ShowMsg("------------- Book List -------------");
+            LoanView.ShowMsg("-------------------------------------- Book List ---------------------------------------");
 
             if (bookList.Count == 0)
             {
@@ -61,7 +61,7 @@ namespace Controllers
                 return;
             }
 
-            LoanView.ShowMsg("------ Available Books ------");
+            LoanView.ShowMsg("-------------------------------- Available Books --------------------------------");
             bController.ShowBook(availableBooks);
         }
         public void LendBook()
@@ -137,12 +137,19 @@ namespace Controllers
                 return;
             }
 
-            LoanView.ShowMsg("------ Active Loans ------");
+            LoanView.ShowMsg("\n╔════════════════════════════════════════════════════════════════════╗");
+            LoanView.ShowMsg("║                             Active Loans                           ║");
+            LoanView.ShowMsg("╠════════════════════════════════════════════════════════════════════╣");
+
             foreach (var loan in loanList)
             {
-                var book = loan.Book; 
-                Console.WriteLine($"{loan.User.Name} - {book.Title} (ISBN: {book.ISBN}) - Date: {loan.LoanDate.ToShortDateString()}");
+                var book = loan.Book;
+                Console.WriteLine("║       User : {0,-20} Book : {1,-25} ║", loan.User.Name, book.Title);
+                Console.WriteLine("║       ISBN : {0,-15} Loan Date : {1,-15}           ║", book.ISBN, loan.LoanDate.ToShortDateString());
+                Console.WriteLine("╠════════════════════════════════════════════════════════════════════╣");
             }
+
+            LoanView.ShowMsg("╚════════════════════════════════════════════════════════════════════╝");
         }
     }
 }
